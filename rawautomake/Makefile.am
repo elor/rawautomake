@@ -11,6 +11,7 @@ CPPFLAGS += -Iinclude
 
 bin_PROGRAMS = this
 this_SOURCES = src/....cpp
+#this_LDFLAGS = -lArgumentParser
 
 #bin_SCRIPTS = src/*.sh
 
