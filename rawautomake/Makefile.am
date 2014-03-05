@@ -1,13 +1,16 @@
 AUTOMAKE_OPTIONS = subdir-objects
-ACLOCAL_AMFLAGS = ${ACLOCAL_FLAGS}
+ACLOCAL_AMFLAGS = -I m4
 
-CPPFLAGS += -Iinclude
-#CPPFLAGS += -fopenmp
+AM_CPPFLAGS = -Iinclude #-fopenmp
 
 #lib_LTLIBRARIES = libTHIS.la
 #libArgumentParser_la_SOURCES = src/....cpp
 #libArgumentParser_la_LDFLAGS = -version-info 0:0:0
+#otherincludedir = $(includedir)/THIS
+#otherinclude_HEADERS = include/....h
+#nobase_otherinclude_HEADERS = include/....h
 #include_HEADERS = include/THIS.h
+#nobase_include_HEADERS = include/THIS.h
 
 bin_PROGRAMS = this
 this_SOURCES = src/....cpp
