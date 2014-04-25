@@ -22,7 +22,6 @@ this_SOURCES = src/....cpp
 # use as last resort
 #this_LDADD	=	-lasd
 # use to build both an executable and a library
-#this_CFLAGS = $(AM_CFLAGS)
 
 #bin_SCRIPTS = src/*.sh
 
