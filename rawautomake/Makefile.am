@@ -17,6 +17,8 @@ AM_CPPFLAGS = -Iinclude #-fopenmp
 #nobase_otherinclude_HEADERS = include/....h
 
 bin_PROGRAMS = this
+# build but don't install
+#check_PROGRAMS = this
 this_SOURCES = src/....cpp
 #this_LDFLAGS = -ldsa
 # use as last resort
