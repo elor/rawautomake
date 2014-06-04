@@ -14,5 +14,5 @@ fi
 echo "setting name to $name"
 echo "Note that this is a one-time operation and cannot be repeated"
 
-sed -i -e "s/$oldname/$newname/g" *
+sed -i -e "s/$oldname/$name/g" *
 
