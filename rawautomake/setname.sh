@@ -14,5 +14,7 @@ fi
 echo "setting name to $name"
 echo "Note that this is a one-time operation and cannot be repeated"
 
-sed -i -e "s/$oldname/$name/g" *
+sed -i -e "s/$oldname/$name/g" `find -type f`
+
+git rm setname.sh -f
 
