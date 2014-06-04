@@ -16,5 +16,6 @@ echo "Note that this is a one-time operation and cannot be repeated"
 
 sed -i -e "s/$oldname/$name/g" `find -type f`
 
-git rm setname.sh -f
+git rm setname.sh --cached
+rm setname.sh
 
