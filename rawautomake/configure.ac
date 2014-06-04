@@ -1,4 +1,4 @@
-AC_INIT([THIS], [1.0], [erik.e.lorenz@gmail.com])
+AC_INIT([CHANGETHIS], [1.0], [erik.e.lorenz@gmail.com])
 #AC_PREREQ(2.12)
 #LT_INIT
 AM_INIT_AUTOMAKE()

@@ -1,1 +1,14 @@
-Insert Readme Here
+# CHANGETHIS
+## Description
+
+CHANGETHIS does CHANGETHIS
+
+## Installation
+
+    ./autogen.sh
+    ./configure
+    make
+    make install
+
+## Usage
+
