@@ -7,7 +7,7 @@ if [ $1 ]; then
   name="$1"
 else
   defaultname=`basename $PWD`
-  read -e -p "what's the name? [$defaultname] " -d name; [ $name ] || name="$defaultname"
+  read -e -p "what's the name? [$defaultname] " name; [ $name ] || name="$defaultname"
   unset defaultname
 fi
 
