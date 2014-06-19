@@ -5,7 +5,7 @@ AM_CPPFLAGS = -Iinclude #-fopenmp
 
 #lib_LTLIBRARIES = libTHIS.la
 #libArgumentParser_la_SOURCES = src/....cpp
-#libArgumentParser_la_LDFLAGS = -version-info 1:0:0
+#libArgumentParser_la_LDFLAGS = -release 0.0.0
 # use this on default
 #include_HEADERS = include/THIS.h
 # use to keep directory structure

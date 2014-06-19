@@ -15,7 +15,7 @@ getlongversion(){
 }
 
 getlibversion(){
-  sed -e 's/[^0-9.].*//' -e 's/\./:/g' <<< $1
+  sed -e 's/[^0-9.].*//' <<< $1
 }
 
 if [ $1 ]; then
@@ -39,7 +39,7 @@ if [ ! $version ] || [ ! $longversion ] || [ ! $libversion ]; then
   exit 1
 fi
 
-if ! grep '[0-9]\+:[0-9]\+:[0-9]\+' &>/dev/null <<< $libversion; then
+if ! grep '[0-9]\+.[0-9]\+.[0-9]\+' &>/dev/null <<< $libversion; then
   echo "error: libversion has wrong format" >&2
   exit 1
 fi
@@ -51,7 +51,7 @@ sed -i -e "/const char \\*version\\(\\[\\]\\)\?/ s/\"[^\"]\+\"/\"$version\"/" in
 sed -i -e "/AC_INIT(/ s/\[[^]]*\]/[$version]/2" configure.ac
 
 # update libversion
-sed -i -e "s/\(-version-info\)\s\+[0-9:]*/\1 $libversion/" Makefile.am
+sed -i -e "s/\(-release\)\s\+[0-9:.]*/\1 $libversion/" Makefile.am
 
 # confirm the changes
 required="include/config.hpp configure.ac Makefile.am"
@@ -67,7 +67,7 @@ while true; do
   case "$remove" in
     y|Y)
       echo "adding changed files"
-      git add $changed
+      git add $required
       echo "removing pushversion.sh"
       git rm --cached $0
       rm $0
