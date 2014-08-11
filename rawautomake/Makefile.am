@@ -25,5 +25,7 @@ this_SOURCES = src/....cpp
 #this_LDADD	=	-lasd
 # use to build both an executable and a library
 
-#bin_SCRIPTS = src/*.sh
+#python_PYTHON = $(top_srcdir)/src/*.py
+
+#dist_bin_SCRIPTS = $(top_srcdir)/src/*.sh
 
